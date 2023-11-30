@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: #d7d7d7;
+    font-family: "Mulish", sans-serif;
+    background: #000;
+}
+
+#preloader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10000;
+    color: #eee;
+    text-align: center;
+}
+
+h1 {
+    color: #eee;
+}
+
+p {
+    margin-block: 1em;
+    font-size: 1.2em;
+    color: #d7d7d7;
+}
+
+a {
+    text-decoration: none;
+    color: #d7d7d7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 20px;
+}
+
+nav img {
+    max-width: 36px;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    transition: 0.3s ease-in-out;
+}
+
+nav li a:hover {
+    color: #016ac1;
+    box-shadow: #eee;
+}
+
+.ham_burger {
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.mobile_nav {
+    background: #061739;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    animation: slideIn 0.4s linear forwards;
+    z-index: 1;
+}
+
+.mobile_nav ul {
+    list-style: none;
+}
+
+.mobile_nav li {
+    margin: 1em;
+    display: block;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.btn {
+    background: #016ac1;
+    padding: 1em 2em;
+    margin-block: 1em;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.inputs {
+    margin-bottom: 1em;
+}
+
+input {
+    width: 250px;
+    border: 2px solid #016ac1;
+    border-radius: 30px;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-inline: auto;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+::placeholder {
+    color: #016ac1;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1em;
+    padding-block: 100px;
+    text-align: center;
+}
+
+section h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+section h3 {
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
+section .content {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+header {
+    min-height: 85vh;
+    background: url(/images/bg.jpeg) center no-repeat;
+    background-size: cover;
+    padding-inline: 1em;
+}
+
+main {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+main dotlottie-player {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+/* main div {
+  flex: 1 0 0px;
+} */
+
+main .content {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+main .content h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+}
+
+.content p {
+    margin-bottom: 2em;
+}
+
+#about {
+    background-color: #061739;
+    background-size: cover;
+}
+
+#about img {
+    max-width: 320px;
+    max-height: 400px;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 2em;
+}
+
+#about video {
+    max-width: 800px;
+    margin-bottom: 2em;
+}
+
+#tokenomics {
+    flex-direction: column;
+}
+
+#utility {
+    background: url(/images/sbg.jpeg) center no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.card h3 {
+    margin-top: auto;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.card {
+    border: 1px solid white;
+    max-width: 320px;
+    background: #016ac1;
+    padding: 1em;
+    border-radius: 0 10px 10px 0;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5em;
+}
+
+footer .social {
+    font-size: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .ham_burger {
+        display: block;
+    }
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+    main .content h1 {
+        font-size: 2em;
+    }
+    #about video {
+        max-width: 320px;
+    }
+    p {
+        font-size: 1em;
+    }
+    section h1 {
+        text-transform: uppercase;
+        font-size: 1.5em;
+    }
+}
